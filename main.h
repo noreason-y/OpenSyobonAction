@@ -17,39 +17,39 @@ void parseArgs(int argc, char* argv[]);
 //: This is unexcusable. How could someone in their right mind define
 //: a variable called 'main'!?
 //: The new define is after the main method
-int mainZ = 100, maintm = 0;
+extern int mainZ, maintm ;
 
 //ステージ
-int stagecolor = 1;
-int sta = 1, stb = 4, stc = 0;
+extern int stagecolor;
+extern int sta, stb, stc;
 
 //クイック
-int fast = 1;
+extern int fast;
 
 //トラップ表示
-int trap = 1;
+extern int trap;
 
 //中間ゲート
-int tyuukan = 0;
+extern int tyuukan;
 
 
 //スタッフロール
-int ending = 0;
+extern int ending;
 
 
 //ステージ読み込みループ(いじらない)
-int stagerr, stagepoint;
+extern int stagerr, stagepoint;
 //オーバーフローさせる
-int over = 0;
+extern int over;
 
 //ステージスイッチ
-int stageonoff = 0;
+extern int stageonoff;
 
 
 //メインプログラム
 void Mainprogram();
 void rpaint();
-int maint;
+extern int maint;
 
 
 //サブクラス
@@ -57,11 +57,11 @@ int maint;
 #define wait(i) SDL_Delay(i)
 void wait2(long stime, long etime, int FLAME_TIME);
 int rand(int Rand);
-#define end() exit(0)
+// #define end() exit(0)
 
 //描画
-Uint32 color;
-Uint32 gfxcolor;
+extern Uint32 color;
+extern Uint32 gfxcolor;
 void setfont(int a);
 void setcolor(int red, int green, int blue);
 void setc0();
@@ -73,18 +73,18 @@ void fillrect(int a, int b, int c, int d);
 void drawarc(int a, int b, int c, int d);
 void fillarc(int a, int b, int c, int d);
 void FillScreen();
-SDL_Surface *grap[161][8];
-SDL_Surface *mgrap[51];
+extern SDL_Surface *grap[161][8];
+extern SDL_Surface *mgrap[51];
 SDL_Surface *loadimage(string b);
 SDL_Surface *loadimage(int a, int x, int y, int r, int z);
-int mirror;
+extern int mirror;
 void drawimage(SDL_Surface * mx, int a, int b);
 void drawimage(SDL_Surface * mx, int a, int b, int c, int d, int e, int f);
 void setre();
 void setre2();
 void setno();
-Mix_Music *otom[6];
-Mix_Chunk *oto[19];
+extern Mix_Music *otom[6];
+extern Mix_Chunk *oto[19];
 void ot(Mix_Chunk * x);
 void bgmchange(Mix_Music * x);
 
@@ -109,43 +109,42 @@ void stagep();
 
 
 //ループ
-int t, tt, t1, t2, t3, t4;
+extern int t, tt, t1, t2, t3, t4;
 
 
 //初期化
-int zxon, zzxon;
+extern int zxon, zzxon;
 
 //キーコンフィグ
-int key, keytm;
+extern int key, keytm;
 
 //三角関数
-double pai = 3.1415926535;
+extern double pai;
 
 
 //地面
 #define smax 31
-int sx, sco;
-int sa[smax], sb[smax], sc[smax], sd[smax], stype[smax], sxtype[smax],
+extern int sx, sco;
+extern int sa[smax], sb[smax], sc[smax], sd[smax], stype[smax], sxtype[smax],
     sr[smax];
-int sgtype[smax];
+extern int sgtype[smax];
 
 
 
 //プレイヤー
-int mainmsgtype;
-int ma, mb, mnobia, mnobib, mhp;
-int mc, md, macttype, atkon, atktm, mactsok, msstar, nokori =
-    3, mactp, mact;
+extern int mainmsgtype;
+extern int ma, mb, mnobia, mnobib, mhp;
+extern int mc, md, macttype, atkon, atktm, mactsok, msstar, nokori, mactp, mact;
 
-int mtype, mxtype, mtm, mzz;
-int mzimen, mrzimen, mkasok, mmuki, mmukitm, mjumptm, mkeytm, mcleartm;
-int mmutekitm, mmutekion;
-int mztm, mztype;
-int actaon[7];
+extern int mtype, mxtype, mtm, mzz;
+extern int mzimen, mrzimen, mkasok, mmuki, mmukitm, mjumptm, mkeytm, mcleartm;
+extern int mmutekitm, mmutekion;
+extern int mztm, mztype;
+extern int actaon[7];
 //メッセージ
-int mmsgtm, mmsgtype;
+extern int mmsgtm, mmsgtype;
 
-int mascrollmax = 21000;	//9000
+extern int mascrollmax;	//9000
 
 
 
@@ -154,12 +153,12 @@ int mascrollmax = 21000;	//9000
 void tyobi(int x, int y, int type);
 void brockbreak(int t);
 #define tmax 641
-int tco;
-int ta[tmax], tb[tmax], tc[tmax], td[tmax], thp[tmax], ttype[tmax];
-int titem[tmax], txtype[tmax];
+extern int tco;
+extern int ta[tmax], tb[tmax], tc[tmax], td[tmax], thp[tmax], ttype[tmax];
+extern int titem[tmax], txtype[tmax];
 
 //メッセージブロック
-int tmsgtm, tmsgtype, tmsgx, tmsgy, tmsgnobix, tmsgnobiy, tmsg;
+extern int tmsgtm, tmsgtype, tmsgx, tmsgy, tmsgnobix, tmsgnobiy, tmsg;
 void ttmsg();
 void txmsg(string x, int a);
 void setfont(int x, int y);
@@ -168,10 +167,10 @@ void setfont(int x, int y);
 void eyobi(int xa, int xb, int xc, int xd, int xe, int xf, int xnobia,
 	   int xnobib, int xgtype, int xtm);
 #define emax 201
-int eco;
-int ea[emax], eb[emax], enobia[emax], enobib[emax], ec[emax], ed[emax];
-int ee[emax], ef[emax], etm[emax];
-int egtype[emax];
+extern int eco;
+extern int ea[emax], eb[emax], enobia[emax], enobib[emax], ec[emax], ed[emax];
+extern int ee[emax], ef[emax], etm[emax];
+extern int egtype[emax];
 
 
 
@@ -180,74 +179,74 @@ void ayobi(int xa, int xb, int xc, int xd, int xnotm, int xtype,
 	   int xxtype);
 void tekizimen();
 #define amax 24
-int aco;
-int aa[amax], ab[amax], anobia[amax], anobib[amax], ac[amax], ad[amax];
-int ae[amax], af[amax], abrocktm[amax];
-int aacta[amax], aactb[amax], azimentype[amax], axzimen[amax];
-int atype[amax], axtype[amax], amuki[amax], ahp[amax];
-int anotm[amax], anx[160], any[160];
-int atm[amax], a2tm[amax];
-int amsgtm[amax], amsgtype[amax];
+extern int aco;
+extern int aa[amax], ab[amax], anobia[amax], anobib[amax], ac[amax], ad[amax];
+extern int ae[amax], af[amax], abrocktm[amax];
+extern int aacta[amax], aactb[amax], azimentype[amax], axzimen[amax];
+extern int atype[amax], axtype[amax], amuki[amax], ahp[amax];
+extern int anotm[amax], anx[160], any[160];
+extern int atm[amax], a2tm[amax];
+extern int amsgtm[amax], amsgtype[amax];
 
 //敵出現
 #define bmax 81
-int bco;
-int ba[bmax], bb[bmax], btm[bmax];
-int btype[bmax], bxtype[bmax], bz[bmax];
+extern int bco;
+extern int ba[bmax], bb[bmax], btm[bmax];
+extern int btype[bmax], bxtype[bmax], bz[bmax];
 
 
 //背景
 #define nmax 41
-int nxxmax, nco;
-int na[nmax], nb[nmax], nc[nmax], nd[nmax], ntype[nmax];
-int ne[nmax], nf[nmax], ng[nmax], nx[nmax];
+extern int nxxmax, nco;
+extern int na[nmax], nb[nmax], nc[nmax], nd[nmax], ntype[nmax];
+extern int ne[nmax], nf[nmax], ng[nmax], nx[nmax];
 
 
 //リフト
 #define srmax 21
-int srco;
-int sra[srmax], srb[srmax], src[srmax], srd[srmax], sre[srmax], srf[srmax];
-int srtype[srmax], srgtype[srmax], sracttype[srmax], srsp[srmax];
-int srmuki[srmax], sron[srmax], sree[srmax];
-int srsok[srmax], srmovep[srmax], srmove[srmax];
+extern int srco;
+extern int sra[srmax], srb[srmax], src[srmax], srd[srmax], sre[srmax], srf[srmax];
+extern int srtype[srmax], srgtype[srmax], sracttype[srmax], srsp[srmax];
+extern int srmuki[srmax], sron[srmax], sree[srmax];
+extern int srsok[srmax], srmovep[srmax], srmove[srmax];
 
 
 
 
 
 //スクロール範囲
-int fx = 0, fy = 0, fzx, fzy, scrollx, scrolly;
+extern int fx, fy, fzx, fzy, scrollx, scrolly;
 //全体のポイント
 
 //: "fma" already exists, so call it something else and add a define
-int fmaZ = 0, fmb = 0;
+extern int fmaZ , fmb;
 #define fma fmaZ
 
 //強制スクロール
-int kscroll = 0;
+extern int kscroll;
 //画面サイズ(ファミコンサイズ×2)(256-224)
-int fxmax = 48000, fymax = 42000;
+extern int fxmax, fymax;
 
 
 
 //ステージ
-byte stagedate[17][2001];
+extern byte stagedate[17][2001];
 
 //画面黒
-int blacktm = 1, blackx = 0;
+extern int blacktm, blackx;
 
 
 
 //自由な値
-int xx[91];
-double xd[11];
-string xs[31];
+extern int xx[91];
+extern double xd[11];
+extern string xs[31];
 
 
 //タイマー測定
 //: Do with this what we did with fma
-long stimeZ;
+extern long stimeZ;
 #define stime stimeZ
 
 
-#endif // MAIN_H
+#endif // GAME_PLAY_H

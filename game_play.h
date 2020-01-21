@@ -1,4 +1,3 @@
-
 #ifndef GAME_PLAY_H
 #define GAME_PLAY_H
 #include "DxLib.h"
@@ -47,9 +46,7 @@ int over = 0;
 int stageonoff = 0;
 
 
-//メインプログラム
-void Mainprogram();
-void rpaint();
+;
 int maint;
 
 
@@ -58,7 +55,7 @@ int maint;
 #define wait(i) SDL_Delay(i)
 void wait2(long stime, long etime, int FLAME_TIME);
 int rand(int Rand);
-#define end() exit(0)
+// #define end() exit(0)
 
 //描画
 Uint32 color;
@@ -250,5 +247,9 @@ string xs[31];
 long stimeZ;
 #define stime stimeZ
 
+//メインプログラム
 
-#endif // GAME_PLAY_H
+void rpaint();
+void Mainprogram();
+
+#endif // MAIN_H

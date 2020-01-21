@@ -1,5 +1,5 @@
-#ifndef GAME_PLAY_H
-#define GAME_PLAY_H
+#ifndef GAME_GRAPHIC_H
+#define GAME_GRAPHIC_H
 
 #include "DxLib.h"
 using namespace std;
@@ -49,7 +49,7 @@ extern int stageonoff;
 
 
 //メインプログラム
-void Mainprogram();
+// void Mainprogram();
 void rpaint();
 extern int maint;
 
@@ -59,7 +59,7 @@ extern int maint;
 #define wait(i) SDL_Delay(i)
 void wait2(long stime, long etime, int FLAME_TIME);
 int rand(int Rand);
-#define end() exit(0)
+// #define end() exit(0)
 
 //描画
 extern Uint32 color;
@@ -251,4 +251,4 @@ extern long stimeZ;
 #define stime stimeZ
 
 
-#endif // GAME_PLAY_H
+#endif // GAME_GRAPHIC_H

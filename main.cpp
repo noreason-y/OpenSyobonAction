@@ -1,5 +1,9 @@
 #include "main.h"
 
+#include <stdlib.h>
+
+extern int maint;
+
 // プログラムは WinMain から始まります
 //Changed to ansi c++ main()
 int main(int argc, char *argv[])
@@ -29,5 +33,7 @@ int main(int argc, char *argv[])
 	}
 
 	//ＤＸライブラリ使用の終了処理
-  end();
+  // end();
+  exit(0);
+
 }
