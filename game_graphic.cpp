@@ -3,8 +3,9 @@
 void rpaint()
 {
 	//ダブルバッファリング
-    setcolor(0, 0, 0);
-//if (stagecolor==1)setcolor(170,170,255);
+  setcolor(0, 0, 0);
+	
+	//if (stagecolor==1)setcolor(170,170,255);
     if (stagecolor == 1)
 	setcolor(160, 180, 250);
     if (stagecolor == 2)
