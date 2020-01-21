@@ -1,5 +1,3 @@
-// #include "main.h"
-// #include "game_play.h"
 #include "game_progress.h"
 
 //メインプログラム
