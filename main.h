@@ -246,6 +246,7 @@ extern string xs[31];
 //タイマー測定
 //: Do with this what we did with fma
 extern long stimeZ;
+
 #define stime stimeZ
 
 

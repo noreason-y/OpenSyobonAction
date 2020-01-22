@@ -38,21 +38,20 @@ extern int tyuukan;
 //スタッフロール
 extern int ending ;
 
-
 //ステージ読み込みループ(いじらない)
 extern int stagerr, stagepoint;
+
 //オーバーフローさせる
 extern int over;
 
 //ステージスイッチ
 extern int stageonoff;
 
-
 //メインプログラム
 // void Mainprogram();
 void rpaint();
-extern int maint;
 
+extern int maint;
 
 //サブクラス
 //(ウエイト系
@@ -64,6 +63,7 @@ int rand(int Rand);
 //描画
 extern Uint32 color;
 extern Uint32 gfxcolor;
+
 void setfont(int a);
 void setcolor(int red, int green, int blue);
 void setc0();
