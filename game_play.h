@@ -158,8 +158,9 @@ int titem[tmax], txtype[tmax];
 
 //メッセージブロック
 int tmsgtm, tmsgtype, tmsgx, tmsgy, tmsgnobix, tmsgnobiy, tmsg;
-void ttmsg();
+
 void txmsg(string x, int a);
+void ttmsg();
 void setfont(int x, int y);
 
 //効果を持たないグラ
